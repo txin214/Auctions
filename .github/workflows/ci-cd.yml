@@ -1,0 +1,25 @@
+name: Continuous Integration and Deployment
+
+on:
+    push:
+        branches:
+            - main
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Check out code 🔔
+              uses: actions/checkout@v2
+
+            - name: Restore dependecies 🛠️
+              run: dotnet restore
+              working-directory: ./src/AuctionService
+
+            - name: Build app 🚀
+              run: dotnet build -c Release --no-restore
+              working-directory: ./src/AuctionService
+
+            - name: Run Automated Tests 🧪
+              run: dotnet test
+              working-directory: ./tests/AuctionService.UnitTests
