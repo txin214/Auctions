@@ -5,29 +5,24 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{AC942C9B-CB02-4194-A95B-D505825CF125}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuctionService", "src\AuctionService\AuctionService.csproj", "{C7EFB87B-DFA9-4327-8FE7-2CF18ACB891A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuctionService", "src\AuctionService\AuctionService.csproj", "{C7EFB87B-DFA9-4327-8FE7-2CF18ACB891A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SearchService", "src\SearchService\SearchService.csproj", "{BA06ECA1-BC19-4737-87F4-3E3317BAB953}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SearchService", "src\SearchService\SearchService.csproj", "{BA06ECA1-BC19-4737-87F4-3E3317BAB953}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityService", "src\IdentityService\IdentityService.csproj", "{A067E8DC-5AB4-4292-A6FD-23A6C7DB8D00}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdentityService", "src\IdentityService\IdentityService.csproj", "{A067E8DC-5AB4-4292-A6FD-23A6C7DB8D00}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contracts", "src\Contracts\Contracts.csproj", "{59AACFC9-2A1D-4FE6-B13B-9069B7745201}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Contracts", "src\Contracts\Contracts.csproj", "{59AACFC9-2A1D-4FE6-B13B-9069B7745201}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GatewayService", "src\GatewayService\GatewayService.csproj", "{92F33DB5-090F-461F-B4D4-B645A33D9EFC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GatewayService", "src\GatewayService\GatewayService.csproj", "{92F33DB5-090F-461F-B4D4-B645A33D9EFC}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{96B27464-A294-43AC-90D6-8312A5D1E011}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuctionService.UnitTests", "tests\AuctionService.UnitTests\AuctionService.UnitTests.csproj", "{712D0427-72F9-4C26-8726-A1769C502652}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuctionService.IntegrationTests", "tests\AuctionService.IntegrationTests\AuctionService.IntegrationTests.csproj", "{A5822C99-8F22-4CE7-B7A1-87087AE6D2C1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuctionService.UnitTests", "tests\AuctionService.UnitTests\AuctionService.UnitTests.csproj", "{712D0427-72F9-4C26-8726-A1769C502652}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{C7EFB87B-DFA9-4327-8FE7-2CF18ACB891A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -54,10 +49,9 @@ Global
 		{712D0427-72F9-4C26-8726-A1769C502652}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{712D0427-72F9-4C26-8726-A1769C502652}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{712D0427-72F9-4C26-8726-A1769C502652}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A5822C99-8F22-4CE7-B7A1-87087AE6D2C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A5822C99-8F22-4CE7-B7A1-87087AE6D2C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A5822C99-8F22-4CE7-B7A1-87087AE6D2C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A5822C99-8F22-4CE7-B7A1-87087AE6D2C1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{C7EFB87B-DFA9-4327-8FE7-2CF18ACB891A} = {AC942C9B-CB02-4194-A95B-D505825CF125}
@@ -66,6 +60,5 @@ Global
 		{59AACFC9-2A1D-4FE6-B13B-9069B7745201} = {AC942C9B-CB02-4194-A95B-D505825CF125}
 		{92F33DB5-090F-461F-B4D4-B645A33D9EFC} = {AC942C9B-CB02-4194-A95B-D505825CF125}
 		{712D0427-72F9-4C26-8726-A1769C502652} = {96B27464-A294-43AC-90D6-8312A5D1E011}
-		{A5822C99-8F22-4CE7-B7A1-87087AE6D2C1} = {96B27464-A294-43AC-90D6-8312A5D1E011}
 	EndGlobalSection
 EndGlobal
