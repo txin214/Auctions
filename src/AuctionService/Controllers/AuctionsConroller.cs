@@ -14,7 +14,7 @@ namespace AuctionService.Controllers;
 [ApiController]
 [Route("api/auctions")]
 public class AuctionsController : ControllerBase
-{
+{ 
     private readonly IAuctionRepository _repo;
     private readonly IMapper _mapper;
     private readonly IPublishEndpoint _publishEndpoint;

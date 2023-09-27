@@ -20,15 +20,17 @@ export default function SignalRProvider({ children, user }: Props) {
     const [connection, setConnection] = useState<HubConnection | null>(null);
     const setCurrentPrice = useAuctionStore(state => state.setCurrentPrice);
     const addBid = useBidStore(state => state.addBid);
+    const apiUrl = process.env.NODE_ENV === 'production' ?
+    'https://api.autobidmaster.com/notifications' : process.env.NEXT_PUBLIC_NOTIFY_URL
 
     useEffect(() => {
         const newConnection = new HubConnectionBuilder()
-            .withUrl(process.env.NEXT_PUBLIC_NOTIFY_URL!)
+            .withUrl(apiUrl!)
             .withAutomaticReconnect()
             .build();
 
         setConnection(newConnection);
-    }, []);
+    }, [apiUrl]);
 
     useEffect(() => {
         if (connection) {
@@ -41,7 +43,7 @@ export default function SignalRProvider({ children, user }: Props) {
                             setCurrentPrice(bid.auctionId, bid.amount);
                         }
                         addBid(bid);
-                    });
+                    })
 
                     connection.on('AuctionCreated', (auction: Auction) => {
                         if (user?.username !== auction.seller) {
@@ -70,7 +72,7 @@ export default function SignalRProvider({ children, user }: Props) {
         return () => {
             connection?.stop();
         }
-    }, [connection, setCurrentPrice])
+    }, [connection, setCurrentPrice, addBid, user?.username])
 
     return (
         children
