@@ -25,7 +25,7 @@ jobs:
     - name: Build and push the Docker image
       uses: docker/build-push-action@v3
       with:
-        context: .
+        context: "{{defaultContext}}"
         file: ${{ env.DOCKERFILE }}
         push: true
         tags: ${{ env.REGISTRY_IMAGE }}:latest

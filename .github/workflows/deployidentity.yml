@@ -21,7 +21,7 @@ jobs:
     - name: Build and push the image 🏗️
       uses: docker/build-push-action@v3
       with:
-        context: .
+        context: "{{defaultContext}}"
         file: src/IdentityService/Dockerfile
         push: true
         tags: txin214/identity-svc:latest
