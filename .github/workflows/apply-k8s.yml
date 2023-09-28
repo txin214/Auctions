@@ -18,4 +18,4 @@ jobs:
         token: ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
     - name: Save DigitalOcean kubeconfig
       run: doctl kubernetes cluster kubeconfig save autobidmaster
-    - run: kubectl apply -f infra/k8S && kubectl apply -f infra/prod-k8s
+    - run: kubectl apply -f infra/k8s && kubectl apply -f infra/prod-k8s
