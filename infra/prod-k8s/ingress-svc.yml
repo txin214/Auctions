@@ -6,13 +6,8 @@ metadata:
     name: ingress-svc
 spec:
   ingressClassName: nginx
-  tls:
-    - hosts:
-      - app.autobidmaster.com
-      - api.autobidmaster.com
-      secretName: carsties-app-tls
   rules:
-  - host: app.autobidmaster.com
+  - host: appauto.tianshuxin.com
     http:
       paths:
       - pathType: Prefix
@@ -22,7 +17,7 @@ spec:
             name: webapp-clusterip
             port: 
               number: 3000
-  - host: api.autobidmaster.com
+  - host: apiauto.tianshuxin.com
     http:
       paths:
       - pathType: Prefix
