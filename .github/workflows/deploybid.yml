@@ -1,16 +1,16 @@
-name: deploy-search
+name: deploy-bid
 
 on:
   workflow_dispatch:
   push:
     branches: [ "main" ]
     paths:
-      - 'src/SearchService/**'
+      - 'src/BiddingService/**'
 
 env:
-  REGISTRY_IMAGE: txin214/search-svc
-  DOCKERFILE: txin214/SearchService/Dockerfile
-  DEPLOYMENT_NAME: search-svc
+  REGISTRY_IMAGE: txin214/bid-svc
+  DOCKERFILE: src/BiddingService/Dockerfile
+  DEPLOYMENT_NAME: bid-svc
 
 jobs:
   build:

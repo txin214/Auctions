@@ -1,16 +1,16 @@
-name: deploy-search
+name: deploy-webapp
 
 on:
   workflow_dispatch:
   push:
     branches: [ "main" ]
     paths:
-      - 'src/SearchService/**'
+      - 'frontend/web-app/**'
 
 env:
-  REGISTRY_IMAGE: txin214/search-svc
-  DOCKERFILE: txin214/SearchService/Dockerfile
-  DEPLOYMENT_NAME: search-svc
+  REGISTRY_IMAGE: txin214/web-app
+  DOCKERFILE: frontend/web-app/Dockerfile
+  DEPLOYMENT_NAME: webapp
 
 jobs:
   build:

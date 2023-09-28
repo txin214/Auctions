@@ -1,16 +1,16 @@
-name: deploy-search
+name: deploy-gateway
 
 on:
   workflow_dispatch:
   push:
     branches: [ "main" ]
     paths:
-      - 'src/SearchService/**'
+      - 'src/GatewayService/**'
 
 env:
-  REGISTRY_IMAGE: txin214/search-svc
-  DOCKERFILE: txin214/SearchService/Dockerfile
-  DEPLOYMENT_NAME: search-svc
+  REGISTRY_IMAGE: txin214/gateway-svc
+  DOCKERFILE: src/GatewayService/Dockerfile
+  DEPLOYMENT_NAME: gateway-svc
 
 jobs:
   build:

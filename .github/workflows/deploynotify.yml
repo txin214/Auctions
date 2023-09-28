@@ -1,16 +1,16 @@
-name: deploy-search
+name: deploy-notify
 
 on:
   workflow_dispatch:
   push:
     branches: [ "main" ]
     paths:
-      - 'src/SearchService/**'
+      - 'src/NotificationService/**'
 
 env:
-  REGISTRY_IMAGE: txin214/search-svc
-  DOCKERFILE: txin214/SearchService/Dockerfile
-  DEPLOYMENT_NAME: search-svc
+  REGISTRY_IMAGE: txin214/notify-svc
+  DOCKERFILE: src/NotificationService/Dockerfile
+  DEPLOYMENT_NAME: notify-svc
 
 jobs:
   build:
