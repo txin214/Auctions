@@ -9,8 +9,8 @@ on:
 
 env:
   REGISTRY_IMAGE: txin214/search-svc
-  DOCKERFILE: txin214/SearchService/Dockerfile
-  DEPLOYMENT_NAME: search-svc
+  DOCKERFILE: src/SearchService/Dockerfile
+  DEPLOYMENT_NAME: search-svcs
 
 jobs:
   build:
