@@ -475,3 +475,5 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+infra/dev-k8s/dev-secrets.yml
+infra/prod-k8s/prod-sercets.yml
