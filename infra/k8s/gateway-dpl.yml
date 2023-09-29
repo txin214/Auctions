@@ -17,7 +17,7 @@ spec:
         imagePullPolicy: Always
         env:
           - name: ClientApp
-            value: https://app.autobidmaster.com
+            value: https://appauto.tianshuxin.com
           - name: IdentityServiceUrl
             value: https://id.txin.link
 ---
